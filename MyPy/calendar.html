@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPy Calendar</title>
+    <link rel="stylesheet" href="static/shared.css">
+    <link rel="stylesheet" href="static/calendar.css">
+</head>
+<body>
+    <div class="calendar-shell">
+        <header class="workspace-header">
+            <div>
+                <h1 class="app-title">Calendar</h1>
+                <p class="app-subtitle">Created notes and code blocks</p>
+            </div>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="index.html" class="button">Workspace</a>
+                <a href="notes.html" class="button">Notes</a>
+                <a href="calendar.html" class="button is-active" aria-current="page">Calendar</a>
+            </nav>
+        </header>
+
+        <main class="calendar-main">
+            <section class="calendar-controls">
+                <button id="calendar-prev-button" class="button" type="button">Previous</button>
+                <h2 id="calendar-month-label" class="calendar-month-label"></h2>
+                <button id="calendar-next-button" class="button" type="button">Next</button>
+                <button id="calendar-today-button" class="button button-muted" type="button">Today</button>
+            </section>
+            <section class="calendar-legend">
+                <span class="legend-item legend-note">Notes</span>
+                <span class="legend-item legend-code">Code</span>
+            </section>
+            <section class="calendar-panel">
+                <div class="calendar-weekdays" aria-hidden="true">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                <div id="calendar-grid" class="calendar-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="static/shared.js"></script>
+    <script src="static/calendar.js"></script>
+</body>
+</html>
