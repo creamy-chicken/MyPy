@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPy Notes</title>
+    <link rel="stylesheet" href="static/shared.css">
+    <link rel="stylesheet" href="static/notes.css">
+</head>
+<body>
+    <div class="notes-shell">
+        <header class="notes-header">
+            <div>
+                <h1 class="notes-title">Notes</h1>
+                <p class="notes-subtitle">Separate local note system</p>
+            </div>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="index.html" class="button">Workspace</a>
+                <a href="notes.html" class="button is-active" aria-current="page">Notes</a>
+                <a href="calendar.html" class="button">Calendar</a>
+            </nav>
+        </header>
+
+        <div class="notes-layout">
+            <aside class="notes-sidebar">
+                <div class="notes-sidebar-top">
+                    <span>Folders</span>
+                    <button id="create-note-folder-button" class="button">New Folder</button>
+                </div>
+                <div class="search-toolbar">
+                    <label class="search-input-wrap" for="note-search-input">
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <input id="note-search-input" type="search" placeholder="Search notes">
+                    </label>
+                    <div class="search-toolbar-actions">
+                        <button id="note-search-button" class="button small" type="button">Search</button>
+                        <button id="recent-notes-button" class="button small button-muted" type="button">Recent</button>
+                    </div>
+                </div>
+                <section id="note-search-results" class="search-results" hidden></section>
+                <div id="note-folder-list" class="notes-sidebar-list"></div>
+            </aside>
+
+            <main id="note-content" class="notes-content"></main>
+        </div>
+    </div>
+
+    <script src="static/shared.js"></script>
+    <script src="static/notes.js"></script>
+</body>
+</html>

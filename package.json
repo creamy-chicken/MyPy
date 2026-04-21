@@ -1,0 +1,13 @@
+{
+  "name": "mypy-local-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Python workspace with code blocks, notes, and calendar views.",
+  "scripts": {
+    "start": "python3 app.py",
+    "dev": "python3 app.py",
+    "check:py": "python3 -m py_compile app.py",
+    "check:js": "node --check static/shared.js && node --check static/main.js && node --check static/notes.js && node --check static/calendar.js",
+    "check": "npm run check:py && npm run check:js"
+  }
+}

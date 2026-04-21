@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPy</title>
+    <link rel="stylesheet" href="static/shared.css">
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="workspace-header">
+            <div>
+                <h1 class="app-title">myPy</h1>
+                <p class="app-subtitle">Python code manager</p>
+            </div>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="index.html" class="button is-active" aria-current="page">Workspace</a>
+                <a href="notes.html" class="button">Notes</a>
+                <a href="calendar.html" class="button">Calendar</a>
+            </nav>
+        </header>
+
+        <div class="workspace-layout">
+            <aside class="sidebar">
+                <div class="sidebar-top">
+                    <span>Folders</span>
+                    <button id="create-folder-button" class="button">New Folder</button>
+                </div>
+                <div class="search-toolbar">
+                    <label class="search-input-wrap" for="block-search-input">
+                        <span class="search-icon" aria-hidden="true"></span>
+                        <input id="block-search-input" type="search" placeholder="Search code blocks">
+                    </label>
+                    <div class="search-toolbar-actions">
+                        <button id="block-search-button" class="button small" type="button">Search</button>
+                        <button id="recent-blocks-button" class="button small button-muted" type="button">Recent</button>
+                    </div>
+                </div>
+                <section id="block-search-results" class="search-results" hidden></section>
+                <div id="folder-list" class="sidebar-list"></div>
+            </aside>
+
+            <main id="main-content" class="content-panel"></main>
+        </div>
+    </div>
+
+    <script src="static/shared.js"></script>
+    <script src="static/main.js"></script>
+</body>
+</html>

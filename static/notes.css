@@ -1,0 +1,108 @@
+.notes-sidebar {
+    background: var(--color-sidebar);
+}
+
+.note-folder-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-folder-header {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-areas:
+        "toggle name"
+        ". actions";
+    align-items: start;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+}
+
+.note-folder-header > .button.small:first-child {
+    grid-area: toggle;
+    min-width: 28px;
+    padding: 4px 8px;
+}
+
+.folder-label-button {
+    grid-area: name;
+}
+
+.note-folder-actions {
+    grid-area: actions;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+.folder-label-button,
+.note-link-button {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+    text-align: left;
+}
+
+.folder-label-button:hover,
+.note-link-button:hover,
+.notes-sidebar-top .button:hover,
+.note-folder-actions .button.small:hover,
+.notes-sidebar-top .button:focus-visible,
+.note-folder-actions .button.small:focus-visible {
+    background: var(--color-surface-subtle);
+}
+
+.folder-label-button.active,
+.note-link-button.active,
+.note-item.active {
+    background: var(--color-surface-active);
+    border-color: #54aeff;
+}
+
+.note-folder-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-top: 0;
+    border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+    background: var(--color-surface-subtle);
+}
+
+.note-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+}
+
+.note-content-area {
+    min-height: 420px;
+}
+
+#create-note-folder-button,
+.note-editor-actions button[type="submit"] {
+    background: var(--color-success);
+    border-color: rgba(27, 31, 36, 0.15);
+    color: #ffffff;
+}
+
+#create-note-folder-button:hover,
+.note-editor-actions button[type="submit"]:hover,
+#create-note-folder-button:focus-visible,
+.note-editor-actions button[type="submit"]:focus-visible {
+    background: var(--color-success-hover);
+    border-color: rgba(27, 31, 36, 0.15);
+    color: #ffffff;
+}
